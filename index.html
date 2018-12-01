@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vinculacion y Residencia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="archivos.php">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="puerk.docx">Formulario</a></p>
+      <p><a href="Control.php">Control Maestros</a></p>
+      
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Formulario</h1>
+      <form action="guardar.php" method="POST">
+
+
+    <div class="form-group"> <!-- Full Name -->
+        <label for="nombre" class="control-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduzca el nombre del alumno">
+    </div>    
+
+    <div class="form-group"> <!-- Street 1 -->
+        <label for="apPaterno" class="control-label">Apellido Paterno</label>
+        <input type="text" class="form-control" id="apellidoPaterno" name="apPaterno" placeholder="Apellido paterno del alumno">
+    </div>                    
+                            
+    <div class="form-group"> <!-- Street 2 -->
+        <label for="apMaterno" class="control-label">Apellido Materno</label>
+        <input type="text" class="form-control" id="street2_id" name="apMaterno" placeholder="Apellido materno del alumno">
+    </div>   
+
+     <div class="form-group"> <!-- Street 2 -->
+        <label for="noControl" class="control-label">Numero de Control</label>
+        <input type="text" class="form-control" id="street2_id" name="noControl" placeholder="########">
+    </div>  
+
+    <div class="form-group"> <!-- State Button -->
+
+        <label for="sexo" class="control-label">Sexo</label>
+        <select class="form-control" name="sexo">
+            <option value="H">Hombre</option>
+            <option value="M">Mujer</option>
+            </select>                    
+    </div>
+
+    <div class="form-group"> <!-- City-->
+        <label for="city_id" class="control-label">Nombre del Proyecto</label>
+        <input type="text" class="form-control" id="city_id" name="nombreProyecto" placeholder="Titulo del Proyecto">
+    </div>
+
+     <div class="form-group"> <!-- State Button -->
+        <label for="state_id" class="control-label">Area del proyecto</label>
+        <select class="form-control" name="areaProyecto">
+            <option value="Redes">Redes</option>
+            <option value="Base de Datos">Base de Datos</option>
+            <option value="Aplicacion">Aplicacion</option>
+
+            </select>                    
+    </div>                                    
+                            
+    <div class="form-group"> <!-- State Button -->
+        <label for="state_id" class="control-label">Carrera</label>
+        <select class="form-control" name="carrera">
+            <option value="Contador">Contador Publico</option>
+            <option value="Electrica">Ing. Electrica</option>
+            <option value="Mecatronica">Ing. Mecatronica</option>
+            <option value="Logistica">Ing. Logistica</option>
+            <option value="Industrial">Ing. Industrial</option>
+            <option value="Electronica">Ing. Electronica</option>
+            <option value="Sistemas">Ing. Sistemas Computacionales</option>
+            <option value="Quimica">Ing. Quimica</option>
+            <option value="Gestion">Ing. Gestion Empresarial</option>
+            <option value="Mecanica">Ing. Mecanica</option>
+            <option value="Energias">Ing. Energias Renovables</option>
+            <option value="Materiales">Ing. Materiales</option>                    
+        </select>                    
+    </div>
+    
+    <div class="form-group"> <!-- Zip Code-->
+        <label for="zip_id" class="control-label">Revisor</label>
+        <input type="text" class="form-control" id="zip_id" name="revisor" placeholder="Inserte numero de empleado">
+    </div>
+
+    <div class="form-group"> <!-- Zip Code-->
+        <label for="zip_id" class="control-label">Asesor Interno</label>
+        <input type="text" class="form-control" id="zip_id" name="asesorInterno" placeholder="Inserte numero de empleado">
+    </div>
+
+    <div class="form-group"> <!-- Zip Code-->
+        <label for="zip_id" class="control-label">Asesor Externo</label>
+        <input type="text" class="form-control" id="zip_id" name="asesorExterno" placeholder="Asesor de la empresa">
+    </div>
+
+    <div class="form-group"> <!-- State Button -->
+        <label for="state_id" class="control-label">Periodo</label>
+        <select class="form-control" name="periodo">
+            <option value="ENE-JUN">ENE - JUN</option>
+            <option value="AGO-DIC">AGO - DIC</option>
+            </select>                    
+    </div>          
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Generar Documentos</button>
+    </div>    
+</form>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Instituto Tecnologico de Mexicali</p>
+</footer>
+
+</body>
+</html>
+
